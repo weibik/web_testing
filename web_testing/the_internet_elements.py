@@ -8,3 +8,4 @@ class TheInternetMainPageLocators:
 
 class AddRemovePageLocators:
     main_url = "https://the-internet.herokuapp.com/add_remove_elements/"
+    add_element_button = (By.XPATH, "//button[contains(text(),'Add Element')]")

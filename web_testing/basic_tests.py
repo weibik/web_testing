@@ -1,4 +1,5 @@
 import unittest
+
 from web_testing.basic_page import WebPage
 from web_testing.the_internet_elements import TheInternetMainPageLocators
 from web_testing.the_internet_elements import AddRemovePageLocators
@@ -45,5 +46,21 @@ class AddRemovePageTests(BaseTestClass):
     def setUpClass(self):
         super().setUpClass()
         self.web_page.open_page(AddRemovePageLocators.main_url)
+
+    def test_adding_element(self):
+        add_element_button = self.web_page.driver.find_element(*AddRemovePageLocators.add_element_button)
+        add_element_button.click()
+
+    def test_removing_element(self):
+        pass
+    
+    def test_remove_not_added_element(self):
+        pass
+
+    def add_multiple_elements(self):
+        pass
+
+    def delete_multiple_elements(self):
+        pass
 
 
