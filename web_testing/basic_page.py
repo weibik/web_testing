@@ -19,9 +19,9 @@ class WebPage(Webdriver):
     def get_element_by_css_selector(self, css_selector):
         return self.driver.find_element(By.CSS_SELECTOR, css_selector)
 
-    def check_exists_by_xpath(self, xpath):
+    def check_if_exists(self, type, locator):
         try:
-            self.driver.find_element_by_xpath(xpath)
+            self.driver.find_element(type, locator)
         except NoSuchElementException:
             return False
         return True
