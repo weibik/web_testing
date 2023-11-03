@@ -2,8 +2,8 @@ import unittest
 import requests
 
 from web_testing.basic_page import WebPage
-from web_testing.the_internet_elements import TheInternetMainPageLocators, BasicAuthLocators, BrokenImagesLocators
-from web_testing.the_internet_elements import AddRemovePageLocators
+from web_testing.the_internet_elements import (TheInternetMainPageLocators, BasicAuthLocators, BrokenImagesLocators,
+                                               AddRemovePageLocators)
 
 
 class BaseTestClass(unittest.TestCase):
