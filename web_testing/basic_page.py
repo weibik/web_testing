@@ -19,6 +19,9 @@ class WebPage(Webdriver):
     def get_element_by_css_selector(self, css_selector):
         return self.driver.find_element(By.CSS_SELECTOR, css_selector)
 
+    def get_elements_by_tag_name(self, tag_name):
+        return self.driver.find_elements(By.TAG_NAME, tag_name)
+
     def check_if_exists(self, type, locator):
         try:
             self.driver.find_element(type, locator)
