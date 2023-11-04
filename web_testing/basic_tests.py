@@ -2,8 +2,9 @@ import unittest
 import requests
 
 from web_testing.basic_page import WebPage
+from web_testing.basic_methods import perform_checkbox_action
 from web_testing.the_internet_elements import (TheInternetMainPageLocators, BasicAuthLocators, BrokenImagesLocators,
-                                               AddRemovePageLocators)
+                                               AddRemovePageLocators, ChallengingDOMLocators, CheckboxesLocators)
 
 
 class BaseTestClass(unittest.TestCase):
@@ -74,6 +75,7 @@ class AddRemovePageTests(BaseTestClass):
         assert len(delete_buttons) == num_of_clicks
 
 
+# TODO
 class BasicAuthTests(BaseTestClass):
     @classmethod
     def setUpClass(cls):
@@ -104,3 +106,36 @@ class BrokenImageTests(BaseTestClass):
                 assert response.status_code != 200, f"Broken image found: {src}"
             else:
                 print(f"Invalid image format: {src}")
+
+
+# TODO
+class ChallengingDOMTests(BaseTestClass):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.web_page.open_page(ChallengingDOMLocators.main_url)
+
+    def tearDown(self):
+        self.web_page.open_page(ChallengingDOMLocators.main_url)
+
+
+class CheckboxesTests(BaseTestClass):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.web_page.open_page(CheckboxesLocators.main_url)
+
+    def tearDown(self):
+        self.web_page.open_page(CheckboxesLocators.main_url)
+
+    def test_check_all_checkboxes(self):
+        checkboxes = self.web_page.driver.find_elements(*CheckboxesLocators.checkbox)
+        perform_checkbox_action(checkboxes, "check")
+        for checkbox in checkboxes:
+            assert checkbox.is_selected(), "All checkboxes should be checked"
+
+    def test_uncheck_all_checkboxes(self):
+        checkboxes = self.web_page.driver.find_elements(*CheckboxesLocators.checkbox)
+        perform_checkbox_action(checkboxes, "uncheck")
+        for checkbox in checkboxes:
+            assert not checkbox.is_selected(), "All checkboxes should be unchecked"
