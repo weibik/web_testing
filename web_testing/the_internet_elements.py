@@ -18,4 +18,13 @@ class BasicAuthLocators:
 
 
 class BrokenImagesLocators:
-    main_url = """https://the-internet.herokuapp.com/broken_images"""
+    main_url = "https://the-internet.herokuapp.com/broken_images"
+
+
+class ChallengingDOMLocators:
+    main_url = "https://the-internet.herokuapp.com/challenging_dom"
+
+
+class CheckboxesLocators:
+    main_url = "https://the-internet.herokuapp.com/checkboxes"
+    checkbox = (By.XPATH, "//input[@type='checkbox']")
