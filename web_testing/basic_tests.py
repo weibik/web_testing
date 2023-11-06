@@ -4,7 +4,8 @@ import requests
 from web_testing.basic_page import WebPage
 from web_testing.basic_methods import perform_checkbox_action
 from web_testing.the_internet_elements import (TheInternetMainPageLocators, BasicAuthLocators, BrokenImagesLocators,
-                                               AddRemovePageLocators, ChallengingDOMLocators, CheckboxesLocators)
+                                               AddRemovePageLocators, ChallengingDOMLocators, CheckboxesLocators,
+                                               ContextMenuLocators, DigestAuthenticationLocators)
 
 
 class BaseTestClass(unittest.TestCase):
@@ -139,3 +140,30 @@ class CheckboxesTests(BaseTestClass):
         perform_checkbox_action(checkboxes, "uncheck")
         for checkbox in checkboxes:
             assert not checkbox.is_selected(), "All checkboxes should be unchecked"
+
+
+class ContextMenuTests(BaseTestClass):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.web_page.open_page(ContextMenuLocators.main_url)
+
+    def tearDown(self):
+        self.web_page.open_page(ContextMenuLocators.main_url)
+
+    def test_context_menu(self):
+        self.web_page.get_element_by_xpath(ContextMenuLocators.context_menu)
+
+
+#TODO
+class DigestAuthenticationTests(BaseTestClass):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.web_page.open_page(DigestAuthenticationLocators.main_url)
+
+    def tearDown(self):
+        self.web_page.open_page(ContextMenuLocators.main_url)
+
+    def test_context_menu(self):
+        pass

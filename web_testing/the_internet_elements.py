@@ -28,3 +28,11 @@ class ChallengingDOMLocators:
 class CheckboxesLocators:
     main_url = "https://the-internet.herokuapp.com/checkboxes"
     checkbox = (By.XPATH, "//input[@type='checkbox']")
+
+class ContextMenuLocators:
+    main_url = "https://the-internet.herokuapp.com/context_menu"
+    context_menu = (By.XPATH, "//*[@id='hot-spot]")
+
+
+class DigestAuthenticationLocators:
+    main_url = "https://the-internet.herokuapp.com/digest_auth"
