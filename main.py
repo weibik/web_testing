@@ -3,29 +3,22 @@ import unittest
 
 from web_testing.basic_tests import AddRemovePageTests, MainPageTests, BasicAuthTests, BrokenImageTests
 
-# Define the test suite
 test_suite = unittest.TestSuite()
+test_classes = {
+    'basic': MainPageTests,
+    'add_remove': AddRemovePageTests,
+    'basic_auth': BasicAuthTests,
+    'broken_img': BrokenImageTests
+}
 
-# Add your test cases to the suite based on the command-line arguments
 parser = argparse.ArgumentParser(description='Run web tests with specific suite.')
-parser.add_argument('-basic', action='store_true', help='Run basic tests')
-parser.add_argument('-add_remove', action='store_true', help='Run AddRemovePageTests')
-parser.add_argument('-basic_auth', action='store_true', help='Run BasicAuthTests')
-parser.add_argument('-broken_img', action='store_true', help='Run BrokenImageTests')
-
+for test_name in test_classes.keys():
+    parser.add_argument(f'-{test_name}', action='store_true', help=f'Run {test_name.replace("_", " ").title()} Tests')
 args = parser.parse_args()
 
-if args.basic:
-    test_suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(MainPageTests))
-
-if args.add_remove:
-    test_suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(AddRemovePageTests))
-
-if args.basic_auth:
-    test_suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(BasicAuthTests))
-
-if args.broken_img:
-    test_suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(BrokenImageTests))
+for test_name, test_class in test_classes.items():
+    if getattr(args, test_name):
+        test_suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(test_class))
 
 # Run the test suite
 unittest.TextTestRunner().run(test_suite)
