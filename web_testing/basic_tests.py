@@ -142,6 +142,7 @@ class CheckboxesTests(BaseTestClass):
             assert not checkbox.is_selected(), "All checkboxes should be unchecked"
 
 
+# TODO
 class ContextMenuTests(BaseTestClass):
     @classmethod
     def setUpClass(cls):
@@ -155,7 +156,7 @@ class ContextMenuTests(BaseTestClass):
         self.web_page.get_element_by_xpath(ContextMenuLocators.context_menu)
 
 
-#TODO
+# TODO
 class DigestAuthenticationTests(BaseTestClass):
     @classmethod
     def setUpClass(cls):
