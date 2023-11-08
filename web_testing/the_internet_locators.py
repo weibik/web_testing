@@ -38,3 +38,7 @@ class ContextMenuLocators:
 class DigestAuthenticationLocators:
     main_url = "https://the-internet.herokuapp.com/digest_auth"
     context_menu = ""
+
+class DissapearingElementsLocators:
+    main_url = "https://the-internet.herokuapp.com/disappearing_elements"
+    home_button = (By.XPATH, "//a[contains(text(),'Home')]")
