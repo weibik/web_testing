@@ -3,10 +3,15 @@ import argparse
 import pytest
 
 test_classes = {
-    'basic': "basic_auth",
     'add_remove': "add_remove_page",
     'basic_auth': "basic_auth",
-    'broken_img': "broken_img"
+    'broken_img': "broken_img",
+    "challenging_dom": "challenging_DOM",
+    "checkboxes": "checkboxes",
+    "context_menu": "context_menu",
+    "digest_path": "digest_path",
+    "dissapearing_elements": "dissapearing_elements",
+    "main_page": "main_page"
 }
 
 parser = argparse.ArgumentParser(description='Run web tests with specific suite.')
