@@ -15,6 +15,9 @@ class AddRemovePageLocators:
 
 class BasicAuthLocators:
     main_url = "https://the-internet.herokuapp.com/basic_auth"
+    main_url_with_good_credentials = "https://admin:admin@the-internet.herokuapp.com/basic_auth"
+    main_url_with_wrong_credentials = "https://admin:user@the-internet.herokuapp.com/basic_auth"
+    congratulations = (By.XPATH, "//*[contains(text(),'Congratulations')]")
 
 
 class BrokenImagesLocators:
@@ -38,6 +41,7 @@ class ContextMenuLocators:
 class DigestAuthenticationLocators:
     main_url = "https://the-internet.herokuapp.com/digest_auth"
     context_menu = ""
+
 
 class DissapearingElementsLocators:
     main_url = "https://the-internet.herokuapp.com/disappearing_elements"
