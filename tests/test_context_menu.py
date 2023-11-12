@@ -11,8 +11,9 @@ def web_page():
     yield web_page
     web_page.driver.quit()
 
-    def test_context_menu(web_page):
-        web_page.get_element_by_xpath(ContextMenuLocators.context_menu)
-        pass
+
+def test_context_menu(web_page):
+    web_page.get_element_by_xpath(ContextMenuLocators.context_menu)
+    pass
 
 # TODO
