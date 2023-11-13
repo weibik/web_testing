@@ -46,3 +46,10 @@ class DigestAuthenticationLocators:
 class DissapearingElementsLocators:
     main_url = "https://the-internet.herokuapp.com/disappearing_elements"
     home_button = (By.XPATH, "//a[contains(text(),'Home')]")
+
+
+class DragAndDropLocators:
+    main_url = "https://the-internet.herokuapp.com/drag_and_drop"
+    draggable_a = (By.XPATH, "//div[@id='column-a']")
+    draggable_b = (By.XPATH, "//div[@id='column-b']")
+
