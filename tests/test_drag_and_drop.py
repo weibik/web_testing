@@ -1,4 +1,5 @@
 import pytest
+import requests
 from selenium.webdriver import ActionChains
 
 from web_testing.basic_page import WebPage
@@ -11,6 +12,11 @@ def web_page():
     web_page.open_page(DragAndDropLocators.main_url)
     yield web_page
     web_page.driver.quit()
+
+
+def test_drag_and_drop_page(web_page):
+    response = requests.get(DragAndDropLocators.main_url)
+    assert response.status_code == 200
 
 
 def drag_and_drop_func(web_page, source, taret):
@@ -54,7 +60,7 @@ def test_drag_b_to_a(web_page):
 
 
 def test_using_actions(web_page):
-    # Same test as "test_drag_a_to_b", but using Actions instead of javascript
+    """Same test as "test_drag_a_to_b", but using Actions instead of javascript."""
     draggable_a = web_page.driver.find_element(*DragAndDropLocators.draggable_a)
     draggable_b = web_page.driver.find_element(*DragAndDropLocators.draggable_b)
     actions = ActionChains(web_page.driver)

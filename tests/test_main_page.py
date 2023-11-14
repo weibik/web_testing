@@ -1,4 +1,5 @@
 import pytest
+import requests
 
 from web_testing.basic_page import WebPage
 from web_testing.the_internet_locators import TheInternetMainPageLocators
@@ -16,6 +17,8 @@ def test_main_page(web_page):
     web_page.open_page(TheInternetMainPageLocators.main_url)
     assert web_page.driver.current_url == "https://the-internet.herokuapp.com/"
     assert web_page.driver.title == "The Internet"
+    response = requests.get(TheInternetMainPageLocators.main_url)
+    assert response.status_code == 200
 
 
 def test_ab_page_navigation(web_page):
