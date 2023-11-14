@@ -11,6 +11,8 @@ test_classes = {
     "context_menu": "context_menu",
     "digest_path": "digest_path",
     "dissapearing_elements": "dissapearing_elements",
+    "drag_and_drop": "drag_and_drop",
+    "dropdown_list": "dropdown_list",
     "main_page": "main_page"
 }
 
