@@ -53,3 +53,10 @@ class DragAndDropLocators:
     draggable_a = (By.XPATH, "//div[@id='column-a']")
     draggable_b = (By.XPATH, "//div[@id='column-b']")
 
+
+class DropDownListLocators:
+    main_url = "https://the-internet.herokuapp.com/dropdown"
+    drop_down_list = (By.ID, "dropdown")
+    option_disabled = (By.XPATH, "//select[@id='dropdown']/option[@disabled='disabled']")
+    option_one = (By.XPATH, "//select[@id='dropdown']/option[@value='1']")
+    option_two = (By.XPATH, "//select[@id='dropdown']/option[@value='2']")
