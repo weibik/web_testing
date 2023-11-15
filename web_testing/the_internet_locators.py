@@ -61,6 +61,7 @@ class DropDownListLocators:
     option_one = (By.XPATH, "//select[@id='dropdown']/option[@value='1']")
     option_two = (By.XPATH, "//select[@id='dropdown']/option[@value='2']")
 
+
 class DynamicContentLocators:
     main_url = "https://the-internet.herokuapp.com/dynamic_content"
     main_url_static = "https://the-internet.herokuapp.com/dynamic_content?with_content=static"
