@@ -31,3 +31,6 @@ class WebPage(Webdriver):
         except NoSuchElementException:
             return False
         return True
+
+    def refresh(self):
+        self.driver.refresh()
