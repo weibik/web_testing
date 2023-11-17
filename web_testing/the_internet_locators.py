@@ -65,3 +65,4 @@ class DropDownListLocators:
 class DynamicContentLocators:
     main_url = "https://the-internet.herokuapp.com/dynamic_content"
     main_url_static = "https://the-internet.herokuapp.com/dynamic_content?with_content=static"
+    row = (By.XPATH, "//div[@class='large-10 columns']")
