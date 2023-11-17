@@ -13,7 +13,7 @@ test_classes = {
     "dissapearing_elements": "dissapearing_elements",
     "drag_and_drop": "drag_and_drop",
     "dropdown_list": "dropdown_list",
-    "dymaic": "dynamic_page",
+    "dynaic": "dynamic_page",
     "main_page": "main_page"
 }
 
