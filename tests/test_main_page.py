@@ -22,14 +22,18 @@ def test_main_page(web_page):
 
 
 def test_ab_page_navigation(web_page):
-    web_page.open_page(TheInternetMainPageLocators.main_url)
     element_ab_testing = web_page.driver.find_element(*TheInternetMainPageLocators.ab_testing_page)
     element_ab_testing.click()
     assert web_page.driver.current_url == "https://the-internet.herokuapp.com/abtest"
 
 
 def test_add_remove_page_navigation(web_page):
-    web_page.open_page(TheInternetMainPageLocators.main_url)
     add_remove_page_hyperlink = web_page.driver.find_element(*TheInternetMainPageLocators.add_remove_page)
     add_remove_page_hyperlink.click()
     assert web_page.driver.current_url == "https://the-internet.herokuapp.com/add_remove_elements/"
+
+
+def test_basic_auth_page_navigation(web_page):
+    basic_auth_hyperlink = web_page.driver.find_element(*TheInternetMainPageLocators.basic_auth_page)
+    basic_auth_hyperlink.click()
+    assert web_page.driver.current_url == "https://the-internet.herokuapp.com/basic_auth"
