@@ -76,3 +76,12 @@ class DynamicControlLocators:
     add_remove_button = (By.XPATH, "//form[@id='checkbox-example']/button[@onclick='swapCheckbox()']")
     checkbox = (By.XPATH, "//form[@id='checkbox-example']/div/input[@type='checkbox']")
     add_remove_message = (By.XPATH, "//form[@id='checkbox-example']/p[@id='message']")
+
+
+class DynamicLoadingLocators:
+    main_url = "https://the-internet.herokuapp.com/dynamic_loading"
+    main_url_added_not_displayed = "https://the-internet.herokuapp.com/dynamic_loading/1"
+    main_url_not_added = "https://the-internet.herokuapp.com/dynamic_loading/2"
+    start_button = (By.XPATH, "//div[@id='start']/button[contains(text(), 'Start')]")
+    loading = (By.XPATH, "//div[@id='loading']")
+    hello_world_message = (By.XPATH, "//div[@id='finish']/h4[contains(text(), 'Hello World')]")
