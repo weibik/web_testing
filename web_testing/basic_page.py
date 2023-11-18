@@ -7,8 +7,11 @@ class WebPage(Webdriver):
     def open_page(self, url):
         self.driver.get(url)
 
-    def get_element_by_id(self, id):
-        return self.driver.find_element(By.ID, id)
+    def get_element(self, *args):
+        return self.driver.find_element(*args)
+
+    def get_element_by_id(self, element_id):
+        return self.driver.find_element(By.ID, element_id)
 
     def get_element_by_link_text(self, link_text):
         return self.driver.find_element(By.LINK_TEXT, link_text)
