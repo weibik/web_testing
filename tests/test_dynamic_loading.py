@@ -16,6 +16,7 @@ def web_page_1():
     yield web_page
     web_page.driver.quit()
 
+
 @pytest.fixture(scope="function")
 def web_page_2():
     web_page = WebPage("Chrome")
