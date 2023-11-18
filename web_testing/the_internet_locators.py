@@ -67,3 +67,12 @@ class DynamicContentLocators:
     main_url = "https://the-internet.herokuapp.com/dynamic_content"
     main_url_static = "https://the-internet.herokuapp.com/dynamic_content?with_content=static"
     row = (By.XPATH, "//div[@class='large-10 columns']")
+
+
+class DynamicControlLocators:
+    main_url = "https://the-internet.herokuapp.com/dynamic_controls"
+    enable_disable_button = (By.XPATH, "//form[@id='input-example']/button[@onclick='swapInput()']")
+    message = (By.XPATH, "//form[@id='input-example']/p[@id='message']")
+    add_remove_button = (By.XPATH, "//form[@id='checkbox-example']/button[@onclick='swapCheckbox()']")
+    checkbox = (By.XPATH, "//form[@id='checkbox-example']/div/input[@type='checkbox']")
+    add_remove_message = (By.XPATH, "//form[@id='checkbox-example']/p[@id='message']")
