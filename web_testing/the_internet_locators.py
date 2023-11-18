@@ -85,3 +85,11 @@ class DynamicLoadingLocators:
     start_button = (By.XPATH, "//div[@id='start']/button[contains(text(), 'Start')]")
     loading = (By.XPATH, "//div[@id='loading']")
     hello_world_message = (By.XPATH, "//div[@id='finish']/h4[contains(text(), 'Hello World')]")
+
+
+class EntryAdLocators:
+    main_url = "https://the-internet.herokuapp.com/entry_ad"
+    model_window = (By.XPATH, "//div[@id='modal'")
+    close_button = (By.XPATH, "//div[@class='modal']/p[contains(text(), 'Close')]")
+    title = (By.XPATH, "//div[@class='example'/h3[contains(text(), 'Entry Ad')]")
+    re_enable_button = (By.XPATH, "//div[@class='example']/p/a[@href id = 'restart-ad']")
