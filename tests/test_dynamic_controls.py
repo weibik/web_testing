@@ -1,5 +1,3 @@
-from telnetlib import EC
-
 import pytest
 import requests
 from selenium.webdriver.support.ui import WebDriverWait
