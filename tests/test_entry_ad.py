@@ -18,6 +18,7 @@ def test_dynamic_loading_first_page(web_page):
     assert response.status_code == 200
 
 
+# Tests fail, because modal window does not appear every time
 def test_modal_window_re_enable(web_page):
     assert web_page.check_if_exists(*EntryAdLocators.model_window)
     close_button = web_page.get_element(*EntryAdLocators.close_button)
