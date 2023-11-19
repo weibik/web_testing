@@ -89,7 +89,28 @@ class DynamicLoadingLocators:
 
 class EntryAdLocators:
     main_url = "https://the-internet.herokuapp.com/entry_ad"
-    model_window = (By.XPATH, "//div[@id='modal'")
+    modal_window = (By.XPATH, "//div[@id='modal'")
     close_button = (By.XPATH, "//div[@class='modal']/p[contains(text(), 'Close')]")
     title = (By.XPATH, "//div[@class='example'/h3[contains(text(), 'Entry Ad')]")
     re_enable_button = (By.XPATH, "//div[@class='example']/p/a[@href id = 'restart-ad']")
+
+
+class ExitIntentLocators:
+    main_url = "https://the-internet.herokuapp.com/exit_intent"
+    modal_window = (By.XPATH, "//div[@class='modal']")
+    title = (By.XPATH, "//div[@class='example']/h3[contains(text(), 'Exit Intent')]")
+    close_button = (By.XPATH, "//div[@class='modal-foote']p[contains(text(), 'Close')]")
+
+
+class FileDownloadLocators:
+    main_url = "https://the-internet.herokuapp.com/download"
+    logo_png = (By.XPATH, "//div[@class='example']/a[@href='download/Logo.png']")
+    lambdaTest_txt = (By.XPATH, "//div[@class='example']/a[@href='download/LambdaTest.txt']")
+    upload_txt = (By.XPATH, "//div[@class='example']/a[@href='download/upload.txt']")
+    screenshot_png = (By.XPATH, "//div[@class='example']/a[@href='download/Zrzut ekranu 2023-11-15 084842.png']")
+    firs_jpg = (By.XPATH, "//div[@class='example']/a[@href='download/1.jpg']")
+    some_file_txt = (By.XPATH, "//div[@class='example']/a[@href='download/some-file.txt']")
+    QC_pdf = (By.XPATH, "//div[@class='example']/a[@href='download/QC interview.pdf']")
+    img_jpg = (By.XPATH, "//div[@class='example']/a[@href='download/IMG-20220115-WA0003.jpg']")
+    script_xml = (By.XPATH, "//div[@class='example']/a[@href='download/5mb script.xml']")
+    b10_docx = (By.XPATH, "//div[@class='example']/a[@href='download/b10 all test cases code.docx']")
