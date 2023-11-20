@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from web_testing.web_driver_structure import Webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -40,3 +42,11 @@ class WebPage(Webdriver):
 
     def refresh(self):
         self.driver.refresh()
+
+    def wait(self, amount_of_time: int = 5):
+        self.driver.implicitly_wait(amount_of_time)
+
+    def wait_for_visibility(self, locator):
+        WebDriverWait(self.driver, 60).until(
+            EC.presence_of_element_located((By.XPATH, locator))
+        )
