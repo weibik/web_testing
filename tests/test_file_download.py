@@ -1,6 +1,5 @@
 import os
-import shutil
-from time import sleep
+import random
 
 import pytest
 import requests
@@ -27,9 +26,11 @@ def test_dynamic_loading_first_page(web_page):
     assert response.status_code == 200
 
 
-def test_download_few_files(web_page):
+def test_download_random_files(web_page):
     elements = web_page.get_elements(*FileDownloadLocators.general_xpath)
-    for element in elements[:5]:
+    number_of_elements = 5
+    random_elements = random.sample(elements, number_of_elements)
+    for element in random_elements[:5]:
         element.click()
         file_name = element.text
         path = os.path.join(web_page.download_directory, file_name)
