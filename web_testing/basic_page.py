@@ -10,6 +10,9 @@ class WebPage(Webdriver):
     def get_element(self, *args):
         return self.driver.find_element(*args)
 
+    def get_elements(self, *args):
+        return self.driver.find_elements(*args)
+
     def get_element_by_id(self, element_id):
         return self.driver.find_element(By.ID, element_id)
 
