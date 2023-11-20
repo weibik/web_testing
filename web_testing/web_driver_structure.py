@@ -7,6 +7,7 @@ class Webdriver:
         self.driver = None
         project_directory = os.path.dirname(os.path.abspath(__file__))
         self.download_directory = os.path.join(project_directory, "downloads")
+        self.upload_directory = os.path.join(project_directory, "upload")
         if browser_type == "Chrome":
             self.initialize_chrome_driver(self.download_directory)
         elif browser_type == "Edge":
