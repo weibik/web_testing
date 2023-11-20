@@ -104,6 +104,7 @@ class ExitIntentLocators:
 
 class FileDownloadLocators:
     main_url = "https://the-internet.herokuapp.com/download"
+    # Files in the website are changing. In case of practice, I've just chosen a few.
     logo_png = (By.XPATH, "//div[@class='example']/a[@href='download/Logo.png']")
     lambdaTest_txt = (By.XPATH, "//div[@class='example']/a[@href='download/LambdaTest.txt']")
     upload_txt = (By.XPATH, "//div[@class='example']/a[@href='download/upload.txt']")
@@ -114,3 +115,4 @@ class FileDownloadLocators:
     img_jpg = (By.XPATH, "//div[@class='example']/a[@href='download/IMG-20220115-WA0003.jpg']")
     script_xml = (By.XPATH, "//div[@class='example']/a[@href='download/5mb script.xml']")
     b10_docx = (By.XPATH, "//div[@class='example']/a[@href='download/b10 all test cases code.docx']")
+    general_xpath = (By.XPATH, "//div[@class='example']/a[contains(@href, 'download')]")
