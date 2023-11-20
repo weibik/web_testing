@@ -99,7 +99,7 @@ class ExitIntentLocators:
     main_url = "https://the-internet.herokuapp.com/exit_intent"
     modal_window = (By.XPATH, "//div[@class='modal']")
     title = (By.XPATH, "//div[@class='example']/h3[contains(text(), 'Exit Intent')]")
-    close_button = (By.XPATH, "//div[@class='modal-foote']p[contains(text(), 'Close')]")
+    close_button = (By.XPATH, "//div[@class='modal-footer']p[contains(text(), 'Close')]")
 
 
 class FileDownloadLocators:
@@ -116,3 +116,10 @@ class FileDownloadLocators:
     script_xml = (By.XPATH, "//div[@class='example']/a[@href='download/5mb script.xml']")
     b10_docx = (By.XPATH, "//div[@class='example']/a[@href='download/b10 all test cases code.docx']")
     general_xpath = (By.XPATH, "//div[@class='example']/a[contains(@href, 'download')]")
+
+
+class FileUploadLocators:
+    main_url = "https://the-internet.herokuapp.com/upload"
+    choose_file = (By.XPATH, "//form[@method='POST']/input[@id='file-upload']")
+    upload_button = (By.XPATH, "//form[@method='POST']/input[@id='file-submit']")
+    finish_msg = (By.XPATH, "//div[@class='example']/h3[contains(text(), 'File Uploaded!')]")
