@@ -19,7 +19,7 @@ def web_page(request):
     web_page.driver.quit()
 
 
-def test_dynamic_loading_first_page(web_page):
+def test_file_upload_first_page(web_page):
     response = requests.get(FileUploadLocators.main_url)
     assert response.status_code == 200
 

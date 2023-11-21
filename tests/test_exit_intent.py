@@ -16,7 +16,7 @@ def web_page():
     web_page.driver.quit()
 
 
-def test_dynamic_loading_first_page(web_page):
+def test_exit_intent_first_page(web_page):
     response = requests.get(ExitIntentLocators.main_url)
     assert response.status_code == 200
 

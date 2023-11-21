@@ -13,7 +13,7 @@ def web_page():
     web_page.driver.quit()
 
 
-def test_dynamic_loading_first_page(web_page):
+def test_entry_ad_first_page(web_page):
     response = requests.get(EntryAdLocators.main_url)
     assert response.status_code == 200
 

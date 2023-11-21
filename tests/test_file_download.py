@@ -21,7 +21,7 @@ def web_page(request):
 
 # TODO Test cleans after itself, but only in case of success. I am not sure how to do it, while it fails.
 # TODO I can delete contest of a folder, but it would destroy parallel tests.
-def test_dynamic_loading_first_page(web_page):
+def test_file_download_first_page(web_page):
     response = requests.get(FileDownloadLocators.main_url)
     assert response.status_code == 200
 
