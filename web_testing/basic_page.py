@@ -2,7 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from web_testing.web_driver_structure import Webdriver
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 
 class WebPage(Webdriver):
@@ -33,10 +33,18 @@ class WebPage(Webdriver):
     def get_elements_by_tag_name(self, tag_name):
         return self.driver.find_elements(By.TAG_NAME, tag_name)
 
-    def check_if_exists(self, type, locator):
+    def check_if_exists(self, locator_type, locator):
         try:
-            self.driver.find_element(type, locator)
+            self.driver.find_element(locator_type, locator)
         except NoSuchElementException:
+            return False
+        return True
+
+    def check_if_visible(self, locator_type, locator, timeout=10):
+        try:
+            element_present = EC.visibility_of_element_located((locator_type, locator))
+            WebDriverWait(self.driver, timeout).until(element_present)
+        except (TimeoutException, NoSuchElementException):
             return False
         return True
 
