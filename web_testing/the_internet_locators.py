@@ -123,3 +123,11 @@ class FileUploadLocators:
     choose_file = (By.XPATH, "//form[@method='POST']/input[@id='file-upload']")
     upload_button = (By.XPATH, "//form[@method='POST']/input[@id='file-submit']")
     finish_msg = (By.XPATH, "//div[@class='example']/h3[contains(text(), 'File Uploaded!')]")
+
+
+class FloatingMenuLocators:
+    main_url = "https://the-internet.herokuapp.com/floating_menu"
+    home_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#home']")
+    news_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#news']")
+    contact_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#contact']")
+    about_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#about']")
