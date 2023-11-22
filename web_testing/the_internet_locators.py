@@ -131,3 +131,10 @@ class FloatingMenuLocators:
     news_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#news']")
     contact_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#contact']")
     about_button = (By.XPATH, "//div[@id='menu']/ul/li/a[@href='#about']")
+
+
+class FormAuthLocators:
+    main_url = "https://the-internet.herokuapp.com/login"
+    loggin_button = (By.XPATH, "//button[@class='radius']/i[@class='fa fa-2x fa-sign-in']")
+    user_name_field = (By.XPATH, "//div[@class='large-6 small-12 columns']/input[@name='username']")
+    password_field = (By.XPATH, "//div[@class='large-6 small-12 columns']/input[@name='password']")
