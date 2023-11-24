@@ -44,7 +44,7 @@ def test_message_added_but_not_displayed(web_page_1):
 
 
 def test_message_added_after_loading(web_page_2):
-    assert not web_page_2.check_if_exists(*DynamicLoadingLocators.hello_world_message)
+    assert not web_page_2.check_if_exists(DynamicLoadingLocators.hello_world_message)
     start_button = web_page_2.get_element(*DynamicLoadingLocators.start_button)
     start_button.click()
     wait = WebDriverWait(web_page_2.driver, 10)

@@ -24,8 +24,8 @@ def test_floating_menu_first_page(web_page):
 
 def test_floating_menu(web_page):
     web_page.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    assert web_page.check_if_visible(*FloatingMenuLocators.home_button)
-    assert web_page.check_if_visible(*FloatingMenuLocators.home_button)
-    assert web_page.check_if_visible(*FloatingMenuLocators.news_button)
-    assert web_page.check_if_visible(*FloatingMenuLocators.contact_button)
-    assert web_page.check_if_visible(*FloatingMenuLocators.about_button)
+    assert web_page.check_if_visible(FloatingMenuLocators.home_button)
+    assert web_page.check_if_visible(FloatingMenuLocators.home_button)
+    assert web_page.check_if_visible(FloatingMenuLocators.news_button)
+    assert web_page.check_if_visible(FloatingMenuLocators.contact_button)
+    assert web_page.check_if_visible(FloatingMenuLocators.about_button)
