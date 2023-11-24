@@ -138,3 +138,10 @@ class FormAuthLocators:
     loggin_button = (By.XPATH, "//button[@class='radius']/i[@class='fa fa-2x fa-sign-in']")
     user_name_field = (By.XPATH, "//div[@class='large-6 small-12 columns']/input[@name='username']")
     password_field = (By.XPATH, "//div[@class='large-6 small-12 columns']/input[@name='password']")
+    valid_nickname = "tomsmith"
+    invalid_nickname = "adamjoseph"
+    valid_password = "SuperSecretPassword!"
+    invalid_password = "hello1234"
+    secure_area_message = (By.XPATH, "//i[@class='icon-lock']")
+    logout_button = (By.XPATH, "//a[@class='button secondary radius']")
+    invalid_auth_warning = (By.ID, "flash")
