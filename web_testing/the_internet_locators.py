@@ -145,3 +145,10 @@ class FormAuthLocators:
     secure_area_message = (By.XPATH, "//i[@class='icon-lock']")
     logout_button = (By.XPATH, "//a[@class='button secondary radius']")
     invalid_auth_warning = (By.ID, "flash")
+
+
+class FramesLocators:
+    main_url = "https://the-internet.herokuapp.com/frames"
+    nested_frames = (By.XPATH, "//a[@href='nested frames']")
+    iframe = (By.XPATH, "//a[@href='iframe']")
+    
