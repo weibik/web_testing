@@ -149,6 +149,28 @@ class FormAuthLocators:
 
 class FramesLocators:
     main_url = "https://the-internet.herokuapp.com/frames"
-    nested_frames = (By.XPATH, "//a[@href='nested frames']")
-    iframe = (By.XPATH, "//a[@href='iframe']")
-    
+    nested_url = "https://the-internet.herokuapp.com/nested_frames"
+    iframe_url = "https://the-internet.herokuapp.com/iframe"
+    nested_frames_link = (By.XPATH, "//a[@href='/nested_frames']")
+    iframe_link = (By.XPATH, "//a[@href='/iframe']")
+    nested_left = (By.XPATH, "//frame[@name='frame-left']")
+    nested_middle = (By.XPATH, "//frame[@name='frame-middle']")
+    nested_right = (By.XPATH, "//frame[@name='frame-right']")
+    nested_bottom = (By.XPATH, "//frame[@name='frame-bottom']")
+    bottom_inside = (By.TAG_NAME, "body")
+    iframe_welcome_screen = (By.XPATH, "//h3[contains(text(), 'An iFrame containing the TinyMCE WYSIWYG Editor')]")
+    iframe_id = "mce_0_ifr"
+    text_area = (By.CLASS_NAME, "mce-content-body")
+    text_to_send = "TEXT FOR THE TEST"
+    text_to_send_2 = " ADDED TEXT"
+    inner_text_field = (By.XPATH, f"//span[contains(text(), '{text_to_send}')]")
+    entered_text = (By.XPATH, "//em")
+    file_button = (By.XPATH, "//span[contains(text(), 'File')]")
+    new_document_option = (By.XPATH, "//div[contains(text(), 'New document')]")
+    edit_button = (By.XPATH, "//span[contains(text(), 'Edit')]")
+    undo_option = (By.XPATH, "//div[contains(text(), 'Undo')]")
+    redo_option = (By.XPATH, "//div[contains(text(), 'Redo')]")
+    format_button = (By.XPATH, "//span[contains(text(), 'Format')]")
+    font_option = (By.XPATH, "//div[contains(text(), 'Fonts')]")
+    tahoma_font = (By.XPATH, "//div[contains(text(), 'Tahoma')]")
+    italic_option = (By.XPATH, "//div[@title='Italic']")
