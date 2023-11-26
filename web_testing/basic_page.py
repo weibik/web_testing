@@ -33,7 +33,7 @@ class WebPage(Webdriver):
     def get_elements_by_tag_name(self, tag_name: str):
         return self.driver.find_elements(By.TAG_NAME, tag_name)
 
-    def check_if_exists(self, locator_type: By, locator: str):
+    def check_if_exists(self, locator_type: str, locator: str):
         try:
             self.driver.find_element(locator_type, locator)
         except NoSuchElementException:
@@ -54,7 +54,17 @@ class WebPage(Webdriver):
     def wait(self, amount_of_time: int = 5):
         self.driver.implicitly_wait(amount_of_time)
 
-    def wait_for_visibility(self, locator):
+    def wait_for_visibility(self, locator_type: str, locator: str):
         WebDriverWait(self.driver, 60).until(
-            EC.presence_of_element_located((By.XPATH, locator))
+            EC.presence_of_element_located((locator_type, locator))
         )
+
+    def wait_for_correct_current_url(self, target_url):
+        wait = WebDriverWait(self.driver, 5)
+        wait.until(lambda driver: driver.current_url == target_url)
+
+    def change_frame(self, target_frame):
+        self.driver.switch_to.frame(target_frame)
+
+    def go_to_parent_frame(self):
+        self.driver.switch_to.parent_frame()
