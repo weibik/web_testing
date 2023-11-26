@@ -24,7 +24,7 @@ def test_correct_login(web_page):
     username.send_keys(FormAuthLocators.valid_nickname)
     password.send_keys(FormAuthLocators.valid_password)
     web_page.get_element(*FormAuthLocators.loggin_button).click()
-    web_page.wait_for_visibility(FormAuthLocators.secure_area_message, 5)
+    web_page.wait_for_visibility(*FormAuthLocators.secure_area_message, 5)
 
 
 def test_incorrect_login(web_page):

@@ -31,4 +31,4 @@ def test_upload_random_files(web_page):
         choose_button.send_keys(file)
     upload_button = web_page.get_element(*FileUploadLocators.upload_button)
     upload_button.click()
-    web_page.wait_for_visibility(FileUploadLocators.finish_msg[1])
+    web_page.wait_for_visibility(*FileUploadLocators.finish_msg)
