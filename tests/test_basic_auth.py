@@ -19,4 +19,4 @@ def test_correct_credentials(web_page):
 
 def test_incorrect_credentials(web_page):
     web_page.open_page(BasicAuthLocators.main_url_with_wrong_credentials)
-    assert not web_page.check_if_exists(BasicAuthLocators.congratulations)
+    assert not web_page.check_if_exists(*BasicAuthLocators.congratulations)

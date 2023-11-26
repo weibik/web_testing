@@ -20,20 +20,20 @@ def test_entry_ad_first_page(web_page):
 
 # Tests fail, because modal window does not appear every time
 def test_modal_window_re_enable(web_page):
-    assert web_page.check_if_exists(EntryAdLocators.modal_window)
+    assert web_page.check_if_exists(*EntryAdLocators.modal_window)
     close_button = web_page.get_element(*EntryAdLocators.close_button)
     close_button.click()
-    assert not web_page.check_if_exists(EntryAdLocators.modal_window)
+    assert not web_page.check_if_exists(*EntryAdLocators.modal_window)
     re_enable_button = web_page.get_element(*EntryAdLocators.re_enable_button)
     re_enable_button.click()
     web_page.refresh()
-    assert web_page.check_if_exists(EntryAdLocators.modal_window)
+    assert web_page.check_if_exists(*EntryAdLocators.modal_window)
 
 
 def test_modal_window_refresh(web_page):
-    assert web_page.check_if_exists(EntryAdLocators.modal_window)
+    assert web_page.check_if_exists(*EntryAdLocators.modal_window)
     close_button = web_page.get_element(*EntryAdLocators.close_button)
     close_button.click()
-    assert not web_page.check_if_exists(EntryAdLocators.modal_window)
+    assert not web_page.check_if_exists(*EntryAdLocators.modal_window)
     web_page.refresh()
-    assert not web_page.check_if_exists(EntryAdLocators.modal_window)
+    assert not web_page.check_if_exists(*EntryAdLocators.modal_window)

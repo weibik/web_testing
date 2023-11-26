@@ -15,15 +15,15 @@ def web_page():
 def test_adding_and_removing_element(web_page):
     add_element_button = web_page.driver.find_element(*AddRemovePageLocators.add_element_button_xpath)
     add_element_button.click()
-    assert web_page.check_if_exists(AddRemovePageLocators.delete_button_xpath)
+    assert web_page.check_if_exists(*AddRemovePageLocators.delete_button_xpath)
     delete_button = web_page.driver.find_element(*AddRemovePageLocators.delete_button_xpath)
     delete_button.click()
     assert not web_page.check_if_exists(
-        AddRemovePageLocators.delete_button_xpath), "'Delete' button should be not available"
+        *AddRemovePageLocators.delete_button_xpath), "'Delete' button should be not available"
 
 
 def test_remove_not_added_element(web_page):
-    assert not web_page.check_if_exists(AddRemovePageLocators.delete_button_xpath), \
+    assert not web_page.check_if_exists(*AddRemovePageLocators.delete_button_xpath), \
         "'Delete' button should be not available"
 
 
