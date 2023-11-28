@@ -174,3 +174,12 @@ class FramesLocators:
     font_option = (By.XPATH, "//div[contains(text(), 'Fonts')]")
     tahoma_font = (By.XPATH, "//div[contains(text(), 'Tahoma')]")
     italic_option = (By.XPATH, "//div[@title='Italic']")
+
+
+class GeolocationLocators:
+    main_url = "https://the-internet.herokuapp.com/geolocation"
+    title = (By.XPATH, "//h3[contains(text(), 'Geolocation')]")
+    where_am_i_button = (By.XPATH, "//button[@onclick='getLocation()']")
+    latitude = (By.XPATH, "//div[@id='lat-value']")
+    longitude = (By.XPATH, "//div[@id='long-value']")
+    see_it_on_google_href = (By.XPATH, "//a[contains(text(), 'See it on Google')]")
