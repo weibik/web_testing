@@ -33,8 +33,8 @@ def test_incorrect_login(web_page):
     username.send_keys(FormAuthLocators.invalid_nickname)
     password.send_keys(FormAuthLocators.invalid_password)
     web_page.get_element(*FormAuthLocators.loggin_button).click()
-    web_page.wait_for_visibility(FormAuthLocators.invalid_auth_warning, 5)
-    assert not web_page.check_if_visible(FormAuthLocators.secure_area_message)
+    web_page.wait_for_visibility(*FormAuthLocators.invalid_auth_warning, 5)
+    assert not web_page.check_if_visible(*FormAuthLocators.secure_area_message)
 
 
 def test_security(web_page):
