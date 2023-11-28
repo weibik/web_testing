@@ -18,6 +18,7 @@ bandit = "^1.7.5"
 requests = "^2.31.0"
 pytest-xdist = "^3.3.1"
 pytest-durations = "^1.2.0"
+geopy = "^2.4.1"
 
 [build-system]
 requires = ["poetry-core"]
