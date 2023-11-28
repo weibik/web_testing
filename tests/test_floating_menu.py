@@ -1,7 +1,3 @@
-import os
-from glob import glob
-from time import sleep
-
 import pytest
 import requests
 
