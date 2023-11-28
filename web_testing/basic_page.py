@@ -54,8 +54,8 @@ class WebPage(Webdriver):
     def wait(self, amount_of_time: int = 5):
         self.driver.implicitly_wait(amount_of_time)
 
-    def wait_for_visibility(self, locator_type: str, locator: str):
-        WebDriverWait(self.driver, 60).until(
+    def wait_for_visibility(self, locator_type: str, locator: str, timeout: int = 3):
+        WebDriverWait(self.driver, timeout).until(
             EC.presence_of_element_located((locator_type, locator))
         )
 
