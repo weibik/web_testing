@@ -183,3 +183,10 @@ class GeolocationLocators:
     latitude = (By.XPATH, "//div[@id='lat-value']")
     longitude = (By.XPATH, "//div[@id='long-value']")
     see_it_on_google_href = (By.XPATH, "//a[contains(text(), 'See it on Google')]")
+
+
+class HorizontalSliderLocators:
+    main_url = "https://the-internet.herokuapp.com/horizontal_slider"
+    title = (By.XPATH, "//h3[contains(text(), 'Horizontal Slider')]")
+    slider = (By.XPATH, "//div[@class='sliderContainer']/input[@type='range']")
+    slider_value = (By.ID, "range")
