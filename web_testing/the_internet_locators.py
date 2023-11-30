@@ -190,3 +190,9 @@ class HorizontalSliderLocators:
     title = (By.XPATH, "//h3[contains(text(), 'Horizontal Slider')]")
     slider = (By.XPATH, "//div[@class='sliderContainer']/input[@type='range']")
     slider_value = (By.ID, "range")
+
+
+class HoversLocators:
+    main_url = "https://the-internet.herokuapp.com/hovers"
+    avatar = (By.XPATH, "//img[@alt='User Avatar']")
+    hovered_part = (By.XPATH, "//div[@class='figcaption']/h5")
