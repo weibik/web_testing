@@ -17,12 +17,12 @@ def web_page(request):
     web_page.driver.quit()
 
 
-def test_infinite_scroll_page(web_page):
+def test_input_page(web_page):
     response = requests.get(InputLocators.main_url)
     assert response.status_code == 200
 
 
-def test_infinite_scroll(web_page):
+def test_input(web_page):
     input_field = web_page.get_element(*InputLocators.input_field)
     default_num = random.randrange(100)
     input_field.send_keys(default_num)
