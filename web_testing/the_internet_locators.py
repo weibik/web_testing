@@ -202,3 +202,8 @@ class InfiniteScrollLocators:
     main_url = "https://the-internet.herokuapp.com/infinite_scroll"
     scroll = (By.ID, "body")
 
+
+class InputLocators:
+    main_url = "https://the-internet.herokuapp.com/inputs"
+    input_field = (By.XPATH, "//input[@type='number']")
+
