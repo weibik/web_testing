@@ -196,3 +196,9 @@ class HoversLocators:
     main_url = "https://the-internet.herokuapp.com/hovers"
     avatar = (By.XPATH, "//img[@alt='User Avatar']")
     hovered_part = (By.XPATH, "//div[@class='figcaption']/h5")
+
+
+class InfiniteScrollLocators:
+    main_url = "https://the-internet.herokuapp.com/infinite_scroll"
+    scroll = (By.ID, "body")
+
