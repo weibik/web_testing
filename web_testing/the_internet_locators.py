@@ -207,3 +207,9 @@ class InputLocators:
     main_url = "https://the-internet.herokuapp.com/inputs"
     input_field = (By.XPATH, "//input[@type='number']")
 
+
+class JQueryMenuLocators:
+    main_url = "https://the-internet.herokuapp.com/jqueryui/menu"
+    enabled = (By.LINK_TEXT, "Enabled")
+    downloads = (By.LINK_TEXT, "Downloads")
+    pdf = (By.LINK_TEXT, "PDF")
