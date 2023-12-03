@@ -1,9 +1,6 @@
 import pytest
 import requests
 
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
 from web_testing.basic_page import WebPage
 from web_testing.the_internet_locators import ExitIntentLocators
 

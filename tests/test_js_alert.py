@@ -1,4 +1,3 @@
-
 import pytest
 import requests
 
@@ -7,7 +6,7 @@ from web_testing.the_internet_locators import JsAlertsLocators
 
 
 @pytest.fixture(scope="function")
-def web_page(request):
+def web_page():
     web_page = WebPage("Chrome")
     web_page.open_page(JsAlertsLocators.main_url)
     yield web_page

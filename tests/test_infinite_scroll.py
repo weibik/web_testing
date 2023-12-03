@@ -2,14 +2,13 @@ import time
 
 import pytest
 import requests
-from selenium.webdriver import Keys
 
 from web_testing.basic_page import WebPage
 from web_testing.the_internet_locators import InfiniteScrollLocators
 
 
 @pytest.fixture(scope="function")
-def web_page(request):
+def web_page():
     web_page = WebPage("Chrome")
     web_page.open_page(InfiniteScrollLocators.main_url)
     yield web_page
