@@ -213,3 +213,12 @@ class JQueryMenuLocators:
     enabled = (By.LINK_TEXT, "Enabled")
     downloads = (By.LINK_TEXT, "Downloads")
     pdf = (By.LINK_TEXT, "PDF")
+
+
+class JsAlertsLocators:
+    main_url = "https://the-internet.herokuapp.com/javascript_alerts"
+    alert_trigger = (By.XPATH, "//button[@onclick='jsAlert()']")
+    confirm_trigger = (By.XPATH, "//button[@onclick='jsConfirm()']")
+    prompt_trigger = (By.XPATH, "//button[@onclick='jsPrompt()']")
+    result = (By.ID, "result")
+
