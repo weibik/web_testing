@@ -222,3 +222,7 @@ class JsAlertsLocators:
     prompt_trigger = (By.XPATH, "//button[@onclick='jsPrompt()']")
     result = (By.ID, "result")
 
+
+class JsErrorLocators:
+    main_url = "https://the-internet.herokuapp.com/javascript_error"
+
