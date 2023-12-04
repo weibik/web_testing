@@ -226,3 +226,8 @@ class JsAlertsLocators:
 class JsErrorLocators:
     main_url = "https://the-internet.herokuapp.com/javascript_error"
 
+
+class KeyPressesLocators:
+    main_url = "https://the-internet.herokuapp.com/key_presses"
+    input_field = (By.ID, "target")
+    result = (By.ID, "result")
