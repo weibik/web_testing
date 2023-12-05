@@ -231,3 +231,8 @@ class KeyPressesLocators:
     main_url = "https://the-internet.herokuapp.com/key_presses"
     input_field = (By.ID, "target")
     result = (By.ID, "result")
+
+
+class LargeDOMLocators:
+    main_url = "https://the-internet.herokuapp.com/large"
+    table = (By.ID, "large-table")
