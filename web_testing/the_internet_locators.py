@@ -241,3 +241,9 @@ class LargeDOMLocators:
 class MultipleWindowsLocators:
     main_url = "https://the-internet.herokuapp.com/windows"
     new_window_button = (By.XPATH, "//a[@href='/windows/new']")
+
+
+class NotificationMessage:
+    main_url = "https://the-internet.herokuapp.com/notification_message_rendered"
+    message = (By.XPATH, "//div[@id='flash']")
+    reload_message_button = (By.XPATH, "//a[@href='/notification_message']")
