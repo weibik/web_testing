@@ -240,4 +240,4 @@ class LargeDOMLocators:
 
 class MultipleWindowsLocators:
     main_url = "https://the-internet.herokuapp.com/windows"
-    new_window_button = (By.LINK_TEXT, "/windows/new")
+    new_window_button = (By.XPATH, "//a[@href='/windows/new']")
