@@ -236,3 +236,8 @@ class KeyPressesLocators:
 class LargeDOMLocators:
     main_url = "https://the-internet.herokuapp.com/large"
     table = (By.ID, "large-table")
+
+
+class MultipleWindowsLocators:
+    main_url = "https://the-internet.herokuapp.com/windows"
+    new_window_button = (By.LINK_TEXT, "/windows/new")
