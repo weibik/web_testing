@@ -1,11 +1,10 @@
 import pytest
 import requests
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 from web_testing.basic_page import WebPage
 from web_testing.the_internet_locators import MultipleWindowsLocators
-from selenium.webdriver.support import expected_conditions as EC, wait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 @pytest.fixture(scope="function")
@@ -16,12 +15,12 @@ def web_page():
     web_page.driver.quit()
 
 
-def test_large_dom_page(web_page):
+def test_multiple_windows_page(web_page):
     response = requests.get(MultipleWindowsLocators.main_url)
     assert response.status_code == 200
 
 
-def test_large_dom(web_page):
+def test_multiple_windows(web_page):
     web_page.wait_for_visibility(*MultipleWindowsLocators.new_window_button, 5)
     current_window = web_page.driver.current_window_handle
     assert len(web_page.driver.window_handles) == 1
