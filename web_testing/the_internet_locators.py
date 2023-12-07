@@ -243,7 +243,17 @@ class MultipleWindowsLocators:
     new_window_button = (By.XPATH, "//a[@href='/windows/new']")
 
 
-class NotificationMessage:
+class NotificationMessageLocators:
     main_url = "https://the-internet.herokuapp.com/notification_message_rendered"
     message = (By.XPATH, "//div[@id='flash']")
     reload_message_button = (By.XPATH, "//a[@href='/notification_message']")
+
+
+class RedirectionLocators:
+    main_url = "https://the-internet.herokuapp.com/redirector"
+    redirect_button = (By.ID, "redirect")
+    status_codes_url = "https://the-internet.herokuapp.com/status_codes"
+    req_200 = (By.LINK_TEXT, "status_code/200")
+    req_301 = (By.LINK_TEXT, "status_code/301")
+    req_404 = (By.LINK_TEXT, "status_code/404")
+    req_500 = (By.LINK_TEXT, "status_code/500")
