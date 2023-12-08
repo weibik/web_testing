@@ -253,7 +253,14 @@ class RedirectionLocators:
     main_url = "https://the-internet.herokuapp.com/redirector"
     redirect_button = (By.ID, "redirect")
     status_codes_url = "https://the-internet.herokuapp.com/status_codes"
-    req_200 = (By.LINK_TEXT, "status_code/200")
-    req_301 = (By.LINK_TEXT, "status_code/301")
-    req_404 = (By.LINK_TEXT, "status_code/404")
-    req_500 = (By.LINK_TEXT, "status_code/500")
+    # status_codes_info = (By.LINK_TEXT, "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml")
+    status_codes_info = (By.XPATH, "//a[@href='http://www.iana.org/assignments"
+                                   "/http-status-codes/http-status-codes.xhtml']")
+    req_200 = (By.LINK_TEXT, "200")
+    status_codes_200_title = (By.XPATH, "//p[contains(text(), 'This page returned a 200 status code.')]")
+    req_301 = (By.LINK_TEXT, "301")
+    status_codes_301_title = (By.XPATH, "//p[contains(text(), 'This page returned a 301 status code.')]")
+    req_404 = (By.LINK_TEXT, "404")
+    status_codes_404_title = (By.XPATH, "//p[contains(text(), 'This page returned a 404 status code.')]")
+    req_500 = (By.LINK_TEXT, "500")
+    status_codes_500_title = (By.XPATH, "//p[contains(text(), 'This page returned a 500 status code.')]")
