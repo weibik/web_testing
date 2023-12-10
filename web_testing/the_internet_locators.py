@@ -263,3 +263,10 @@ class RedirectionLocators:
     status_codes_404_title = (By.XPATH, "//p[contains(text(), 'This page returned a 404 status code.')]")
     req_500 = (By.LINK_TEXT, "500")
     status_codes_500_title = (By.XPATH, "//p[contains(text(), 'This page returned a 500 status code.')]")
+
+
+class ShadoDOMLocators:
+    main_url = "https://the-internet.herokuapp.com/shadowdom"
+    paraps = (By.TAG_NAME, "my-paragraph")
+    text_1 = (By.XPATH, "//*[@id='content']/my-paragraph[1]")
+    text_2 = (By.XPATH, "//*[@id='content']/my-paragraph[2]")
