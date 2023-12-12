@@ -270,3 +270,20 @@ class ShadoDOMLocators:
     paraps = (By.TAG_NAME, "my-paragraph")
     text_1 = (By.XPATH, "//*[@id='content']/my-paragraph[1]")
     text_2 = (By.XPATH, "//*[@id='content']/my-paragraph[2]")
+    
+
+class ShiftingContentLocators:
+    main_url = "https://the-internet.herokuapp.com/shifting_content"
+    menu_element_button = (By.LINK_TEXT, "Example 1: Menu Element")
+    image_button = (By.LINK_TEXT, "Example 2: An image")
+    list_button = (By.LINK_TEXT, "Example 3: List")
+
+
+class SlowResourcesLocators:
+    main_url = "https://the-internet.herokuapp.com/slow"
+
+
+class DataTablesLocators:
+    main_url = "https://the-internet.herokuapp.com/tables"
+    table_1 = (By.ID, "table1")
+    table_2 = (By.ID, "table1")
