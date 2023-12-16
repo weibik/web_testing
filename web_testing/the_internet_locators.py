@@ -265,7 +265,7 @@ class RedirectionLocators:
     status_codes_500_title = (By.XPATH, "//p[contains(text(), 'This page returned a 500 status code.')]")
 
 
-class ShadoDOMLocators:
+class ShadowDOMLocators:
     main_url = "https://the-internet.herokuapp.com/shadowdom"
     paraps = (By.TAG_NAME, "my-paragraph")
     text_1 = (By.XPATH, "//*[@id='content']/my-paragraph[1]")
@@ -275,8 +275,16 @@ class ShadoDOMLocators:
 class ShiftingContentLocators:
     main_url = "https://the-internet.herokuapp.com/shifting_content"
     menu_element_button = (By.LINK_TEXT, "Example 1: Menu Element")
+    refresh_button = (By.XPATH, "//a[@href='/shifting_content/menu?mode=random&pixel_shift=100']")
+    portfolio = (By.XPATH, "//a[@href='/portfolio/']")
+    refreshed_menu_url = "https://the-internet.herokuapp.com/shifting_content/menu?mode=random&pixel_shift=100"
     image_button = (By.LINK_TEXT, "Example 2: An image")
+    image = (By.XPATH, "//img[@class='shift']")
+    refresh_image_button = (By.XPATH, "//a[@href='/shifting_content/image?mode=random&pixel_shift=100']")
+    refreshed_img_url = "https://the-internet.herokuapp.com/shifting_content/image?mode=random&pixel_shift=100"
     list_button = (By.LINK_TEXT, "Example 3: List")
+    list_page_title = (By.XPATH, "//div[@class='example']/h3")
+    list_locator = (By.XPATH, "//div[@class='large-6 columns large-centered']")
 
 
 class SlowResourcesLocators:
