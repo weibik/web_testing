@@ -295,3 +295,9 @@ class DataTablesLocators:
     main_url = "https://the-internet.herokuapp.com/tables"
     table_1 = (By.ID, "table1")
     table_2 = (By.ID, "table1")
+
+
+class TyposLocators:
+    main_url = "https://the-internet.herokuapp.com/status_codes"
+    text_1 = (By.TAG_NAME, "//p[0]")
+    text_2 = (By.TAG_NAME, "//p[1]")
