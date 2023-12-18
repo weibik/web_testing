@@ -34,6 +34,6 @@ def test_typos_in_text_1_element(web_page):
         words = text_1.split()
         typos = spell.unknown(words)
         if typos:
-            print(f"There are typos in your code {typos}.")
+            print(f"Typos found: {typos}.")
         else:
             print("No typos found.")
