@@ -298,6 +298,5 @@ class DataTablesLocators:
 
 
 class TyposLocators:
-    main_url = "https://the-internet.herokuapp.com/status_codes"
-    text_1 = (By.TAG_NAME, "//p[0]")
-    text_2 = (By.TAG_NAME, "//p[1]")
+    main_url = "https://the-internet.herokuapp.com/typos"
+    text = (By.XPATH, "//p")
