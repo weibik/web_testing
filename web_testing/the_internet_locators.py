@@ -295,6 +295,7 @@ class DataTablesLocators:
     main_url = "https://the-internet.herokuapp.com/tables"
     table_1 = (By.ID, "table1")
     table_2 = (By.ID, "table1")
+    table_1_last_name = (By.XPATH, "//*[@id='table1']/thead/tr/th[1]")
 
 
 class TyposLocators:
