@@ -19,6 +19,12 @@
 3. run tests
    **poetry run python main.py -{test_class} -n {number of parallel runs}**
 
+**Example**
+- poetry run python main.py -add_remove -n 3
+
+**help**
+- poetry run python main.py -h
+
 **Available test classes:**
 - add_remove  
 - basic_auth  
@@ -58,10 +64,3 @@
 - shifting_content  
 - sortable_data_res  
 - typos  
-
-
-
-
-Example: **poetry run python main.py -add_remove -n 3**
-
-
